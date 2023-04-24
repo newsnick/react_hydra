@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
 
+$mainbg: #302c42;
+$maintext: #fff;
+$btntext: #343045;
+$btnradius: #ffffff;
+
 *,
 ::after,
 ::before {
@@ -8,9 +13,33 @@
   box-sizing: border-box;
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
+  background-color: $mainbg;
+  color: $maintext;
 }
 
 html {
   font-size: 100%;
+}
+
+@mixin btn {
+  width: 155px;
+  height: 48px;
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $btntext;
+}
+
+@mixin btnlarge {
+  width: 214px;
+  height: 48px;
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: $btntext;
 }
