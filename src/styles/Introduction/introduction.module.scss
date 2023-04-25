@@ -1,1 +1,24 @@
 @import '../_global.scss';
+
+.introcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin: 100px;
+  flex-wrap: wrap;
+}
+
+.apiheader1 {
+  @include header1;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.apiheader2 {
+  @include header2;
+}
+
+.apicontent {
+  @include mntext;
+  max-width: 600px;
+}

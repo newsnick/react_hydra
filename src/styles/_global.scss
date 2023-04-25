@@ -4,6 +4,7 @@ $mainbg: #302c42;
 $maintext: #fff;
 $btntext: #343045;
 $btnradius: #ffffff;
+$altheader: rgba(255, 255, 255, 0.95);
 
 *,
 ::after,
@@ -42,4 +43,25 @@ html {
   font-size: 12px;
   line-height: 15px;
   color: $btntext;
+}
+
+@mixin header1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: $maintext;
+}
+
+@mixin header2 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  color: $altheader;
+}
+
+@mixin mntext {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $maintext;
 }

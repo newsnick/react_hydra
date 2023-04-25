@@ -14,8 +14,7 @@
   background-color: transparent;
 }
 
-.imagecontainer {
-  max-width: 100%;
+.imagebox {
 }
 
 .homeimage {
@@ -41,8 +40,7 @@
 }
 
 .text3 {
-  font-size: 16px;
-  line-height: 20px;
+  @include mntext;
   max-width: 450px;
 }
 
@@ -62,6 +60,16 @@
 .containermax {
   display: flex;
   justify-content: center;
-  gap: 10%;
-  margin-left: -40%;
+  gap: 150px;
+  padding-right: 520px;
+}
+
+.rectanglebox {
+  text-align: center;
+  margin-top: 400px;
+}
+
+.rectangle {
+  width: 1272px;
+  height: 167px;
 }
