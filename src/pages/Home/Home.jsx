@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import styles from '../../styles/Home/Home.module.scss'
 import bgvector1 from '../../assets/webbrowser/images/homebg1.svg'
@@ -31,6 +31,58 @@ const Home = () => {
         </div>
         <div className={styles.imagecontainer}>
           <img className={styles.homeimage} src={homeimage} alt="homeimage" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Home
+ */
+
+import React from 'react'
+import NavBar from '../../components/NavBar/NavBar'
+import styles from '../../styles/Home/Home.module.scss'
+import { bgVectors, homeImage } from '../../utils'
+
+const Home = () => {
+  const {
+    containermax,
+    contentbox,
+    text1,
+    altcolor,
+    text2,
+    text3,
+    imagecontainer,
+  } = styles
+
+  return (
+    <div className={styles.homecontainer}>
+      {bgVectors.map((vector, index) => (
+        <img
+          className={styles[`vector${index + 1}`]}
+          src={vector}
+          alt={`bgvector${index + 1}`}
+          key={`bgvector${index + 1}`}
+        />
+      ))}
+      <NavBar />
+      <div className={containermax}>
+        <div className={contentbox}>
+          <p className={text1}>
+            <span className={altcolor}>Dive</span> Into The Depths
+          </p>
+          <p className={text2}>
+            Of <span className={altcolor}>Virtual Reality</span>
+          </p>
+          <p className={text3}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
+            Lectus mauris eros in vitae.
+          </p>
+        </div>
+        <div className={imagecontainer}>
+          <img className={styles.homeimage} src={homeImage} alt="homeimage" />
         </div>
       </div>
     </div>

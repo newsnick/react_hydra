@@ -4,6 +4,29 @@ import logoname from '../../assets/webbrowser/images/logoname.svg'
 import styles from '../../styles/NavBar/NavBar.module.scss'
 
 const NavBar = () => {
+  const menubar = [
+    {
+      title: 'ABOUT',
+      path: '/about',
+    },
+    {
+      title: 'SERVICES',
+      path: '/services',
+    },
+    {
+      title: 'TECHNOLOGIES',
+      path: '/technologies',
+    },
+    {
+      title: 'HOW TO',
+      path: '/howto',
+    },
+  ]
+
+  const navigate = (path) => {
+    // navigation logic here
+  }
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logodisplay}>
@@ -12,22 +35,20 @@ const NavBar = () => {
       </div>
 
       <div className={styles.list}>
-        {' '}
         <ul>
-          <li>ABOUT</li>
-          <li>SERVICES</li>
-          <li>TECHNOLOGIES</li>
-          <li>HOW TO</li>
+          {menubar.map((item) => (
+            <li key={item.title} onClick={() => navigate(item.path)}>
+              {item.title}
+            </li>
+          ))}
         </ul>
       </div>
 
       <div className={styles.btns}>
-        {' '}
         <button className={styles.btn}>CONTACT US</button>
         <button className={styles.btn2}>JOIN HYDRA</button>
       </div>
     </nav>
   )
 }
-
 export default NavBar
