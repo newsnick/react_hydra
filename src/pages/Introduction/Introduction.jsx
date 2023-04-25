@@ -8,7 +8,7 @@ const Introduction = () => {
         <p className={styles.apiheader}>API Header</p>
         <p className={styles.apiheader2}>API Header2</p>
       </div>
-      <div className={styles.apiintro2}>
+      <article className={styles.apiintro2}>
         <p className={styles.apicontent}>
           Vitae sapien pellentesque habitant morbi tristique senectus et netus
           et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
@@ -16,7 +16,7 @@ const Introduction = () => {
           aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in.
           Lectus magna fringilla urna porttitor rhoncus vitae.
         </p>
-      </div>
+      </article>
     </div>
   )
 }
