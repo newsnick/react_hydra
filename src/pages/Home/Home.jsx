@@ -9,14 +9,16 @@ const Home = () => {
 
   return (
     <div className={styles.homecontainer}>
-      {bgVectors.map((vector, index) => (
-        <img
-          className={styles[`vector${index + 1}`]}
-          src={vector}
-          alt={`bgvector${index + 1}`}
-          key={`bgvector${index + 1}`}
-        />
-      ))}
+      <div className={styles.vectorbox}>
+        {bgVectors.map((vector, index) => (
+          <img
+            className={styles[`vector${index + 1}`]}
+            src={vector}
+            alt={`bgvector${index + 1}`}
+            key={`bgvector${index + 1}`}
+          />
+        ))}
+      </div>
       <NavBar />
       <div className={containermax}>
         <div className={contentbox}>

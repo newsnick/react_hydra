@@ -3,6 +3,8 @@
 $mainbg: #302c42;
 $maintext: #fff;
 $btntext: #343045;
+$btncol1: #8176af 0%;
+$btncol2: #c0b7e8 100%;
 $btnradius: #ffffff;
 $altheader: rgba(255, 255, 255, 0.95);
 
@@ -26,23 +28,25 @@ html {
 @mixin btn {
   width: 155px;
   height: 48px;
-  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  background: linear-gradient(90deg, $btncol1, $btncol2);
   border-radius: 40px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   color: $btntext;
+  z-index: 3;
 }
 
 @mixin btnlarge {
   width: 214px;
   height: 48px;
-  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  background: linear-gradient(90deg, $btncol1, $btncol2);
   border-radius: 40px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   color: $btntext;
+  z-index: 3;
 }
 
 @mixin header1 {
