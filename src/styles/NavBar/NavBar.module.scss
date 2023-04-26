@@ -1,44 +1,6 @@
-/* @import '../_global.scss';
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.logodisplay {
-  display: flex;
-  gap: 15px;
-}
-
-ul {
-  display: flex;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  gap: 41px;
-  list-style: none;
-}
-
-.btns {
-  display: flex;
-  gap: 38px;
-}
-
-.btn {
-  @include btn;
-  border: 2px solid $btnradius;
-  background: transparent;
-  color: $maintext;
-}
-
-.btn2 {
-  @include btn;
-} */
-
 @import '../_global.scss';
 
-.navbar {
+.navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +8,7 @@ ul {
   padding: 3%;
 }
 
-.logodisplay {
+.logoDisplay {
   display: flex;
   gap: 15px;
 }

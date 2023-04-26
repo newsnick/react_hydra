@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../assets/webbrowser/images/logo.svg'
 import logoname from '../../assets/webbrowser/images/logoname.svg'
 import styles from '../../styles/NavBar/NavBar.module.scss'
+import { navigate } from 'react-router-dom'
 
 const NavBar = () => {
   const menubar = [
@@ -28,8 +29,8 @@ const NavBar = () => {
   }
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logodisplay}>
+    <nav className={styles.navBar}>
+      <div className={styles.logoDisplay}>
         <img src={logo} alt="logo" />
         <img src={logoname} alt="logo" />
       </div>

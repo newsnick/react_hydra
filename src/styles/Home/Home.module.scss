@@ -1,10 +1,10 @@
 @import '../_global.scss';
 
-.homecontainer {
+.homeContainer {
   width: 100%;
 }
 
-.vectorbox {
+.vectorBox {
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -18,7 +18,7 @@
 .vector2,
 .vector3,
 .vector4,
-.homeimage {
+.homeImage {
   position: absolute;
   z-index: 3;
   background-color: transparent;
@@ -39,10 +39,10 @@
   top: 350px;
 }
 
-.imagebox {
+.imageBox {
 }
 
-.homeimage {
+.homeImage {
   width: 524px;
   height: 455px;
   background: rgba(0, 0, 0, 0.13);
@@ -69,7 +69,7 @@
   max-width: 450px;
 }
 
-.altcolor {
+.altColor {
   background: linear-gradient(91.57deg, #c0b7e8 -1.02%, #8176af 36.25%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -77,12 +77,12 @@
   text-fill-color: transparent;
 }
 
-.homecontent {
+.homeContent {
   display: flex;
   position: absolute;
 }
 
-.containermax {
+.containerMax {
   display: flex;
   justify-content: center;
   gap: 150px;
@@ -90,7 +90,7 @@
   flex-wrap: wrap;
 }
 
-.rectanglebox {
+.rectangleBox {
   text-align: center;
   margin-top: 400px;
 }
