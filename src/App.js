@@ -3,6 +3,7 @@ import './styles/App.scss'
 import Home from './pages/Home/Home'
 import Introduction from './pages/Introduction/Introduction'
 import About from './pages/About/About'
+import Presentation from './pages/Presentation/Presentation'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Introduction />
       <About />
+      <Presentation />
     </div>
   )
 }
