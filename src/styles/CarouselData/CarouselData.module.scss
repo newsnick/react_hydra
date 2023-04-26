@@ -1,0 +1,22 @@
+@import '../_global.scss';
+
+.contentStyle {
+  height: 160 px;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: #211e2e;
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  gap: 10px;
+}
+
+.card {
+  width: 310px;
+  height: 511px;
+
+  background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+  border-radius: 40px;
+  border: 1px solid red;
+}

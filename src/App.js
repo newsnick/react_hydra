@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Introduction from './pages/Introduction/Introduction'
 import About from './pages/About/About'
 import Presentation from './pages/Presentation/Presentation'
+import Showcase from './pages/Showcase/Showcase'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Introduction />
       <About />
       <Presentation />
+      <Showcase />
     </div>
   )
 }

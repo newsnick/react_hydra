@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Presentation/Presentation.module.scss'
+import CarouselData from '../../components/CarouselData/CarouselData'
 
 const Presentation = () => {
   return (
@@ -18,6 +19,9 @@ const Presentation = () => {
             in. Lectus magna fringilla urna porttitor rhoncus vitae.
           </p>
         </article>
+      </div>
+      <div className={styles.presentationBox2}>
+        <CarouselData />
       </div>
     </div>
   )
