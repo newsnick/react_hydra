@@ -1,0 +1,23 @@
+@import '../_global.scss';
+
+.fetchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  padding: 2%;
+}
+
+.apiHeader1 {
+  @include header1;
+}
+
+.apiHeader2 {
+  @include header2;
+}
+
+.apiContent {
+  max-width: 630px;
+  margin: 20px 0 20px;
+  @include mntext;
+}

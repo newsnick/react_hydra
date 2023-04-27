@@ -3,17 +3,19 @@ import styles from '../../styles/CarouselData/CarouselData.module.scss'
 import styled from 'styled-components'
 
 const StyledCarousel = styled(Carousel)`
-  > .slick-dots li button {
+  > .slick-dots li button::before {
     width: 12px;
     height: 12px;
     border-radius: 100%;
-    color: white !important;
+    background: white;
+    inset: 2;
   }
-  > .slick-dots li.slick-active button {
+  > .slick-dots li button::after {
     width: 14px;
     height: 14px;
-    border-radius: 100%;
-    background: red !important;
+    border-radius: 10%;
+    background: white;
+    inset: -4;
   }
 `
 

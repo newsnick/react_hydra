@@ -1,0 +1,9 @@
+@import '../_global.scss';
+
+.companies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
