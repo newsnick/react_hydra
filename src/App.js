@@ -6,6 +6,7 @@ import About from './pages/About/About'
 import Presentation from './pages/Presentation/Presentation'
 import Showcase from './pages/Showcase/Showcase'
 import Specs from './pages/Specs/Specs'
+import ContactForm from './components/ContactForm/ContactForm'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Presentation />
       <Showcase />
       <Specs />
+      <ContactForm />
     </div>
   )
 }

@@ -1,0 +1,130 @@
+@import '../_global.scss';
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header,
+.header2,
+#line {
+  background: transparent;
+  text-align: center;
+}
+
+#line {
+  padding: 3%;
+  margin-bottom: -10px;
+}
+
+.header {
+  @include header1;
+}
+
+.header2 {
+  @include header2;
+  margin-bottom: 5%;
+}
+
+.formBackGround {
+  width: 1275px;
+  height: 1008px;
+  background: radial-gradient(50% 50% at 50% 50%, $formbg, $formbg2);
+  box-shadow: 0px 4px 4px $boxshadow;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form,
+.submitBtn,
+.inputField,
+.imputTextArea,
+.nameEmail,
+.msgPhone,
+.subject,
+.messageField,
+.phone,
+.name,
+.email,
+.comments {
+  background: transparent;
+}
+
+.form {
+  text-align: center;
+}
+
+.submitBtn {
+  @include btn;
+  width: 214px;
+  height: 48px;
+}
+
+.inputField,
+.inputTextArea {
+  background: transparent !important;
+  height: 72px;
+  border: 2px solid $btnradius;
+  border-radius: 40px;
+  width: 524px;
+  padding-left: 7%;
+}
+
+.inputField2 {
+  @include inputfield;
+  width: 1058px;
+  height: 72px;
+  padding-left: 3%;
+  cursor: pointer;
+}
+
+.inputTextArea {
+  @include inputfield;
+  justify-content: center;
+  display: inline;
+  width: 1058px;
+  height: 210px;
+  resize: none;
+  padding: 3%;
+  margin: 3%;
+}
+
+.nameEmail {
+  display: flex;
+  justify-content: center;
+  gap: 9.5px;
+}
+
+.msgPhone {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  gap: 9.5px;
+}
+
+.neutralText {
+  font-size: 11.7077px;
+  line-height: 14px;
+  margin: 5px 0 20px 0;
+  width: 660px;
+}
+
+.neutralAsterisk {
+}
+
+.error {
+  color: $alertcolor;
+}
+.invalid {
+  border-color: $alertcolor;
+  color: $alertcolor;
+}
+
+.subject {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+}

@@ -1,0 +1,26 @@
+@import '../_global.scss';
+
+.roundBtn {
+  width: 159px;
+  height: 159px;
+  border-radius: 50%;
+  background: linear-gradient(251.27deg, $btncolor, $btncolor2);
+  text-align: center;
+}
+
+.outerShadow {
+  width: 198px;
+  height: 198px;
+  border: 20px solid $btnshadow;
+  border-radius: 50%;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apiDescription {
+  display: flex;
+  padding: 15%;
+  gap: 15px;
+}

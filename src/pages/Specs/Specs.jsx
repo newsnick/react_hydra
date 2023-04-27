@@ -5,6 +5,7 @@ import logo2 from '../../assets/webbrowser/images/logounity.svg'
 import logo3 from '../../assets/webbrowser/images/logooculus.svg'
 import logo4 from '../../assets/webbrowser/images/logovive.svg'
 import ApiFetchBox from '../../components/ApiFetchBox/ApiFetchBox'
+import RoundButton from '../../components/RoundButton/RoundButton'
 
 const Specs = () => {
   return (
@@ -25,6 +26,12 @@ const Specs = () => {
         </div>
       </div>
       <ApiFetchBox />
+      <div className={styles.apiButtons}>
+        <RoundButton />
+        <RoundButton />
+        <RoundButton />
+        <RoundButton />
+      </div>
     </>
   )
 }

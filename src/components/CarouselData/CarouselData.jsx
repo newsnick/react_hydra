@@ -11,11 +11,11 @@ const StyledCarousel = styled(Carousel)`
     inset: 2;
   }
   > .slick-dots li button::after {
-    width: 14px;
+    width: 30px;
     height: 14px;
     border-radius: 10%;
     background: white;
-    inset: -4;
+    inset: 0;
   }
 `
 

@@ -8,6 +8,9 @@ export const homeImage = require(`./assets/webbrowser/images/${
   images.slice(-1)[0]
 }.svg`)
 
+export const nameRegex = /^[A-Za-z]{2,}$/
+export const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+
 /* import bgvector1 from './assets/webbrowser/images/homebg1.svg'
 import bgvector2 from './assets/webbrowser/images/homebg2.svg'
 import bgvector3 from './assets/webbrowser/images/homebg3.svg'
