@@ -2,6 +2,13 @@
 
 $imgshadow: rgba(0, 0, 0, 0.25);
 
+.aboutVector,
+.aboutVector2 {
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+}
+
 .aboutBox1 {
   display: flex;
   justify-content: center;

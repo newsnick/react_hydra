@@ -6,11 +6,12 @@ import logo3 from '../../assets/webbrowser/images/logooculus.svg'
 import logo4 from '../../assets/webbrowser/images/logovive.svg'
 import ApiFetchBox from '../../components/ApiFetchBox/ApiFetchBox'
 import RoundButton from '../../components/RoundButton/RoundButton'
+import specsVector from '../../assets/webbrowser/icons/specsvector.svg'
 
 const Specs = () => {
   return (
     <>
-      {' '}
+      <img className={styles.specsVector} src={specsVector} alt="vector" />
       <div className={styles.companies}>
         <div>
           <img src={logo1} alt="unreal" />

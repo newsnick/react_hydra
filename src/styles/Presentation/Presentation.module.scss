@@ -1,4 +1,10 @@
 @import '../_global.scss';
 
+.presVector {
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+}
+
 .presentationBox {
 }

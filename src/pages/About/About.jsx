@@ -1,10 +1,14 @@
 import React from 'react'
 import styles from '../../styles/About/About.module.scss'
 import aboutimg from '../../assets/webbrowser/images/introimage.svg'
+import aboutVector from '../../assets/webbrowser/icons/aboutvector.svg'
+import aboutVector2 from '../../assets/webbrowser/icons/aboutvector2.svg'
 
 const About = () => {
   return (
     <div>
+      <img className={styles.aboutVector} src={aboutVector} alt="vector" />
+      <img className={styles.aboutVector2} src={aboutVector2} alt="vector2" />
       <div className={styles.aboutBox1}>
         <div className={styles.aboutImage}>
           <img className={styles.aboutImg} src={aboutimg} alt="about" />

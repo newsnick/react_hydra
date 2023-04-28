@@ -1,5 +1,11 @@
 @import '../_global.scss';
 
+.specsVector {
+  position: absolute;
+  z-index: 3;
+  background-color: transparent;
+}
+
 .companies {
   display: flex;
   justify-content: center;
