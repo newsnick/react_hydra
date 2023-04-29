@@ -11,7 +11,6 @@ import specsVector from '../../assets/webbrowser/icons/specsvector.svg'
 const Specs = () => {
   return (
     <>
-      <img className={styles.specsVector} src={specsVector} alt="vector" />
       <div className={styles.companies}>
         <div>
           <img src={logo1} alt="unreal" />
@@ -28,6 +27,9 @@ const Specs = () => {
       </div>
       <ApiFetchBox />
       <div className={styles.apiButtons}>
+        <div className={styles.vectorBox}>
+          <img className={styles.specsVector} src={specsVector} alt="vector" />
+        </div>
         <RoundButton />
         <RoundButton />
         <RoundButton />

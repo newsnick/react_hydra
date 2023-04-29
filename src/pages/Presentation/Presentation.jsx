@@ -7,7 +7,11 @@ import presVector from '../../assets/webbrowser/icons/presentvector.svg'
 const Presentation = () => {
   return (
     <div>
-      <img className={styles.presVector} src={presVector} alt="vector" />
+      <div className={styles.vectorBox}>
+        {' '}
+        <img className={styles.presVector} src={presVector} alt="vector" />
+      </div>
+
       <ApiFetchBox />
       <div className={styles.presentationBox}>
         <CarouselData />

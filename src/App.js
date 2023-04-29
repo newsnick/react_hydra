@@ -7,6 +7,7 @@ import Presentation from './pages/Presentation/Presentation'
 import Showcase from './pages/Showcase/Showcase'
 import Specs from './pages/Specs/Specs'
 import ContactForm from './components/ContactForm/ContactForm'
+import Footer from './pages/Footer/Footer'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Showcase />
       <Specs />
       <ContactForm />
+      <Footer />
     </div>
   )
 }

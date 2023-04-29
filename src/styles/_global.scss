@@ -92,3 +92,13 @@ html {
   line-height: 17px;
   font-weight: 400;
 }
+
+@mixin vectorBox {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 100px;
+  position: absolute;
+  width: 100%;
+  padding-left: 400px;
+}

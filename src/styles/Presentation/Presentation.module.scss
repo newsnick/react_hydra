@@ -6,5 +6,11 @@
   background-color: transparent;
 }
 
+.vectorBox {
+  @include vectorBox;
+  padding-left: 0px;
+  top: 2350px;
+}
+
 .presentationBox {
 }

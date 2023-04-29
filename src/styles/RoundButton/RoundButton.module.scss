@@ -1,11 +1,19 @@
 @import '../_global.scss';
 
+.buttonBox {
+  position: relative;
+  z-index: 3;
+}
 .roundBtn {
   width: 159px;
   height: 159px;
   border-radius: 50%;
   background: linear-gradient(251.27deg, $btncolor, $btncolor2);
   text-align: center;
+}
+
+.roundBtn:after {
+  background: blue;
 }
 
 .outerShadow {

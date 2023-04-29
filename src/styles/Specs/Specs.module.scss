@@ -1,5 +1,11 @@
 @import '../_global.scss';
 
+.vectorBox {
+  @include vectorBox;
+  padding-left: 0px;
+  top: 4065px;
+}
+
 .specsVector {
   position: absolute;
   z-index: 3;
@@ -12,6 +18,11 @@
   align-items: center;
   gap: 90px;
   flex-wrap: wrap;
+}
+
+.roundButton {
+  position: relative;
+  z-index: 3;
 }
 
 .apiButtons {

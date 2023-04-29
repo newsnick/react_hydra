@@ -4,7 +4,7 @@ import arrowRight from '../../assets/webbrowser/icons/arrowright.svg'
 
 const RoundButton = () => {
   return (
-    <div>
+    <div className={styles.buttonBox}>
       <div className={styles.outerShadow}>
         <div className={styles.roundBtn}></div>
       </div>

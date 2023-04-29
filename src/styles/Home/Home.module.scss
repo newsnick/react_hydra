@@ -5,12 +5,7 @@
 }
 
 .vectorBox {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  margin: 100px;
-  position: absolute;
-  width: 100%;
+  @include vectorBox;
   padding-left: 485px;
 }
 
