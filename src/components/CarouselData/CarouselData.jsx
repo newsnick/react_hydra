@@ -1,6 +1,7 @@
 import { Carousel } from 'antd'
 import styles from '../../styles/CarouselData/CarouselData.module.scss'
 import styled from 'styled-components'
+import VRNews from '../VRNews/VRNews'
 
 const StyledCarousel = styled(Carousel)`
   > .slick-dots li button::before {
@@ -19,39 +20,59 @@ const StyledCarousel = styled(Carousel)`
   }
 `
 
-const CarouselData = () => (
-  <StyledCarousel effect="fade">
-    <div>
-      <h3 className={styles.contentStyle}>
-        <div className={styles.card}></div> <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </h3>
-    </div>
-    <div>
-      <h3 className={styles.contentStyle}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </h3>
-    </div>
-    <div>
-      <h3 className={styles.contentStyle}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </h3>
-    </div>
-    <div>
-      <h3 className={styles.contentStyle}>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-        <div className={styles.card}></div>
-      </h3>
-    </div>
-  </StyledCarousel>
-)
+const CarouselData = () => {
+  return (
+    <StyledCarousel effect="fade">
+      <div>
+        <h3 className={styles.contentStyle}>
+          <div className={styles.card}>
+            <VRNews />
+          </div>{' '}
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+        </h3>
+      </div>
+      <div>
+        <h3 className={styles.contentStyle}>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+        </h3>
+      </div>
+      <div>
+        <h3 className={styles.contentStyle}>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+        </h3>
+      </div>
+      <div>
+        <h3 className={styles.contentStyle}>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+          <div className={styles.card}></div>
+        </h3>
+      </div>
+    </StyledCarousel>
+  )
+}
+
 export default CarouselData

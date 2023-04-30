@@ -1,0 +1,23 @@
+@import '../_global.scss';
+
+.thumbnailImage {
+  width: 280.99px;
+  height: 180.74px;
+  object-fit: cover;
+}
+
+.title {
+  @include fetchedtitle;
+  padding: 3%;
+  text-align: left;
+  max-width: 281px;
+}
+
+.content {
+  @include fetchedtext;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  padding: 4%;
+  max-width: 281px;
+}

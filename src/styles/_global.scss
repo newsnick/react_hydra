@@ -14,6 +14,23 @@ $boxshadow: rgba(0, 0, 0, 0.25);
 $btnshadow: rgba(13, 13, 13, 0.3);
 $btncolor: #c0b7e8 12.87%;
 $btncolor2: #8176af 89.33%;
+$primarycolor: #2947a9;
+$secondarycolor: #f9995d;
+$neutralbg: #f6f8f7;
+$primarytext: #3d445c;
+$secondarytext: #858ead;
+$whitegeneric: #ffffff;
+$altcolortext: #667299;
+$altcolortext2: #525b7a;
+$coloroli: #c2c7d6;
+$titlecolor: #292e3d;
+$bgform: #f6f8f7;
+$bordercolor: #e0e3eb;
+$inputtext: #a3aac2;
+$asteriskcolor: #ed6565;
+$neutralfield: #667299;
+$neutralasterisk: #c40303;
+$bgartwork: #3559c7;
 
 *,
 ::after,
@@ -101,4 +118,39 @@ html {
   position: absolute;
   width: 100%;
   padding-left: 400px;
+}
+
+@mixin fetchedtitle {
+  font-weight: 700;
+  font-size: 14.6px;
+  line-height: 17px;
+  text-align: center;
+  color: $whitegeneric;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: $primarycolor;
+}
+
+@mixin fetchedtext {
+  font-size: 18px;
+  line-height: 21px;
+  color: $whitegeneric;
+  background: $primarycolor;
+}
+
+@mixin fetchbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2.9px 14.6px;
+  gap: 7.32px;
+  width: 215.86px;
+  height: 46.83px;
+  background: $titlecolor;
+  font-size: 14px;
+  line-height: 21px;
+  color: $whitegeneric;
+  cursor: pointer;
 }
