@@ -1,23 +1,54 @@
 @import '../_global.scss';
 
+.apiBox {
+  background: transparent;
+  text-align: -moz-center;
+  margin-top: 40px;
+}
+
+.newsCard {
+  background: transparent;
+  display: inline-flex;
+}
+
 .thumbnailImage {
-  width: 280.99px;
-  height: 180.74px;
-  object-fit: cover;
+  object-fit: fill;
+  width: 190.92px;
+  height: 190.92px;
+  display: inline;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .title {
   @include fetchedtitle;
-  padding: 3%;
-  text-align: left;
+  padding: 5%;
+  text-align: center;
   max-width: 281px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  background: transparent;
+  text-transform: uppercase;
+  height: 70px;
 }
 
 .content {
   @include fetchedtext;
-  font-size: 14px;
-  line-height: 21px;
   text-align: left;
   padding: 4%;
   max-width: 281px;
+  font-size: 12px;
+  line-height: 15px;
+  background: transparent;
+  height: 50px;
+}
+
+.btn {
+  @include btn;
+}
+
+.line {
+  padding: 5%;
+  background: transparent;
 }

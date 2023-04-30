@@ -10,13 +10,24 @@
   justify-content: center;
   padding: 3%;
   gap: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .card {
   width: 310px;
   height: 511px;
-
-  background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #433d60 0%,
+    #211e2e 100%
+  ) !important;
   border-radius: 40px;
-  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
 }

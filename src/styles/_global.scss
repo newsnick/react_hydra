@@ -59,6 +59,7 @@ html {
   line-height: 15px;
   color: $btntext;
   z-index: 3;
+  cursor: pointer;
 }
 
 @mixin btnlarge {
