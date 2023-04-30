@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../assets/webbrowser/images/logo.svg'
 import logoname from '../../assets/webbrowser/images/logoname.svg'
 import styles from '../../styles/NavBar/NavBar.module.scss'
-import { navigate } from 'react-router-dom'
+//import { navigate } from 'react-router-dom'
 
 const NavBar = () => {
   const menubar = [

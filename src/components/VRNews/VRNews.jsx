@@ -138,7 +138,6 @@ function VRNews() {
   }, [dispatch])
 
   const handleNextPost = () => {
-    console.log('Button clicked')
     setCurrentIndex((currentIndex + 1) % shuffledArticles.length)
   }
 
@@ -162,7 +161,10 @@ function VRNews() {
           <img
             className={styles.thumbnailImage}
             src={shuffledArticles[currentIndex].image}
-            alt={shuffledArticles[currentIndex].title}
+            alt={shuffledArticles[currentIndex].title
+              .split(' ')
+              .slice(0, 3)
+              .join(' ')}
           />
           <h2 className={styles.title}>
             {shuffledArticles[currentIndex].title

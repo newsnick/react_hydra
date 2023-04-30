@@ -42,6 +42,21 @@
   height: 455px;
   background: rgba(0, 0, 0, 0.13);
   border-radius: 100px 100px 100px 240px;
+  margin-left: 1200px;
+}
+.homeImage2 {
+  width: 524px;
+  height: 455px;
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 100px 100px 100px 240px;
+}
+
+.contentBox {
+  margin-left: -200px;
+}
+
+.btn {
+  @include btnlarge;
 }
 
 .text1,
@@ -52,6 +67,10 @@
 .text1 {
   font-size: 46px;
   line-height: 56px;
+  word-break: break-all;
+  text-align: justify;
+  max-width: 486px;
+  height: 170px;
 }
 
 .text2 {
@@ -62,6 +81,7 @@
 .text3 {
   @include mntext;
   max-width: 450px;
+  height: 144px;
 }
 
 .altColor {

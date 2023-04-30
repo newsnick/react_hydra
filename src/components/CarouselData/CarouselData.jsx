@@ -57,18 +57,34 @@ const CarouselData = () => {
       </div>
       <div>
         <h3 className={styles.contentStyle}>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
         </h3>
       </div>
       <div>
         <h3 className={styles.contentStyle}>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
+          <div className={styles.card}>
+            <VRNews />
+          </div>
         </h3>
       </div>
     </StyledCarousel>
