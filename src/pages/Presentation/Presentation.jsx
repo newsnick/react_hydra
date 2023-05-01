@@ -13,7 +13,7 @@ const Presentation = () => {
       </div>
 
       <ApiFetchBox />
-      <div className={styles.presentationBox}>
+      <div className={styles.presentationBox} id="presentation">
         <CarouselData />
       </div>
     </div>

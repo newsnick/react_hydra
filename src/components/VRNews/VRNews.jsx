@@ -44,7 +44,7 @@ function VRNews() {
   }
 
   return (
-    <div className={styles.newsCard}>
+    <div className={styles.newsCard} id="vrnews">
       {shuffledArticles.length > 0 && (
         <div className={styles.apiBox} key={shuffledArticles[currentIndex].id}>
           <img

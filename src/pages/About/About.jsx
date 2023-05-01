@@ -38,6 +38,7 @@ const About = () => {
     return (
       <ContentBox key={article.id}>
         <AboutImg
+          id="about"
           src={article.image}
           alt={article.title.split(' ').slice(0, 3).join(' ')}
         />

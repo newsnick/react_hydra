@@ -26,7 +26,7 @@ const Specs = () => {
         </div>
       </div>
       <ApiFetchBox />
-      <div className={styles.apiButtons}>
+      <div className={styles.apiButtons} id="specs">
         <div className={styles.vectorBox}>
           <img className={styles.specsVector} src={specsVector} alt="vector" />
         </div>

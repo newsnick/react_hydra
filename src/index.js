@@ -5,6 +5,25 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store/store'
 import App from './App'
 import styled, { css } from 'styled-components'
+import { Carousel } from 'antd'
+
+const StyledCarousel = styled(Carousel)`
+  > .slick-dots li button::before {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: white;
+    inset: 2;
+  }
+  > .slick-dots li button::after {
+    width: 30px;
+    height: 14px;
+    border-radius: 10%;
+    background: white;
+    inset: 0;
+  }
+`
+export default StyledCarousel
 
 const btnlarge = css`
   width: 214px;

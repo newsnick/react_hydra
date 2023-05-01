@@ -63,7 +63,9 @@ const Home = () => {
           />
         ))}
       </div>
+
       <NavBar />
+
       <div className={styles.containerMax}>
         {loading ? (
           <p>Loading...</p>
