@@ -9,7 +9,7 @@ import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 const Home = () => {
   const dispatch = useDispatch()
   const { articles, loading, error } = useSelector((state) => state.vrnews)
-  const [articleIndex, setArticleIndex] = useState(-1)
+  const [articleIndex, setArticleIndex] = useState(1)
 
   useEffect(() => {
     dispatch(fetchVRNews())
@@ -56,7 +56,7 @@ const Home = () => {
       </div>
       <NavBar />
       <div className={styles.containerMax}>
-        {loading ? (
+        {/* {loading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>Error: {error}</p>
@@ -78,29 +78,60 @@ const Home = () => {
               Next
             </button>
           </div>
+        ) : null} */}
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : articles.length > 0 && articleIndex < articles.length ? (
+          <div className={styles.contentBox} key={articles[articleIndex].id}>
+            <h2 className={styles.text1}>
+              {getStyledTitle(
+                articles[articleIndex].title.split(' ').slice(0, 6).join(' ')
+              )}
+            </h2>
+
+            <p className={styles.text3}>
+              {articles[articleIndex].description
+                .split(' ')
+                .slice(0, 26)
+                .join(' ')}
+            </p>
+            <button className={styles.btn} onClick={handleNextClick}>
+              Next
+            </button>
+          </div>
         ) : null}
-        <img
+
+        {/* <img
           className={styles.homeImage}
           src={articles[articleIndex].image}
           alt={articles[articleIndex].title}
-        />
+        /> */}
+        {articles.length > 0 && articleIndex < articles.length && (
+          <img
+            className={styles.homeImage}
+            src={articles[articleIndex].image}
+            alt={articles[articleIndex].title.split(' ').slice(0, 3).join(' ')}
+          />
+        )}
 
         {/* <div className={styles.contentBox}>
-          <p className={styles.text1}>
-            <span className={styles.altColor}>Dive</span> Into The Depths
-          </p>
-          <p className={styles.text2}>
-            Of <span className={styles.altColor}>Virtual Reality</span>
-          </p>
-          <p className={styles.text3}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
-            Lectus mauris eros in vitae.
-          </p>
-        </div>
-        <div className={styles.imageBox}>
-          <img className={styles.homeImage} src={homeImage} alt="homeimage" />
-        </div> */}
+            <p className={styles.text1}>
+              <span className={styles.altColor}>Dive</span> Into The Depths
+            </p>
+            <p className={styles.text2}>
+              Of <span className={styles.altColor}>Virtual Reality</span>
+            </p>
+            <p className={styles.text3}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
+              Lectus mauris eros in vitae.
+            </p>
+          </div>
+          <div className={styles.imageBox}>
+            <img className={styles.homeImage} src={homeImage} alt="homeimage" />
+          </div> */}
       </div>
       <div className={styles.rectangleBox}>
         <img
