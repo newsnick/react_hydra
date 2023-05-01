@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Skeleton } from 'antd'
 import './styles/App.scss'
 import Home from './pages/Home/Home'
 import Introduction from './pages/Introduction/Introduction'
@@ -9,17 +10,31 @@ import Specs from './pages/Specs/Specs'
 import ContactForm from './components/ContactForm/ContactForm'
 import Footer from './pages/Footer/Footer'
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
   return (
     <div>
-      <Home />
-      <Introduction />
-      <About />
-      <Presentation />
-      <Showcase />
-      <Specs />
-      <ContactForm />
-      <Footer />
+      {loading ? (
+        <Skeleton active />
+      ) : (
+        <>
+          <Home />
+          <Introduction />
+          <About />
+          <Presentation />
+          <Showcase />
+          <Specs />
+          <ContactForm />
+          <Footer />
+        </>
+      )}
     </div>
   )
 }
