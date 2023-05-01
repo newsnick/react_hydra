@@ -1,10 +1,21 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import styles from '../../styles/About/About.module.scss'
+import {
+  VectorBox,
+  AboutVectorImg,
+  AboutVector2Img,
+  AboutBox,
+  AboutImg,
+  ApiHeader1,
+  ApiContent,
+  Wrapper,
+  Button,
+  ContentBox,
+} from '../../index.js'
+import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import aboutimg from '../../assets/webbrowser/images/introimage.svg'
 import aboutVector from '../../assets/webbrowser/icons/aboutvector.svg'
 import aboutVector2 from '../../assets/webbrowser/icons/aboutvector2.svg'
-import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 
 const About = () => {
   const dispatch = useDispatch()
@@ -25,33 +36,30 @@ const About = () => {
     }
     const article = articles[articleIndex]
     return (
-      <div className={styles.contentBox} key={article.id}>
-        <img
-          className={styles.aboutImg}
+      <ContentBox key={article.id}>
+        <AboutImg
           src={article.image}
           alt={article.title.split(' ').slice(0, 3).join(' ')}
         />
-        <h2 className={styles.apiHeader1}>
+        <ApiHeader1>
           {article.title.split(' ').slice(0, 6).join(' ')}
-        </h2>
-        <p className={styles.apiContent}>
+        </ApiHeader1>
+        <ApiContent>
           {article.description.split(' ').slice(0, 100).join(' ')}
-        </p>
-        <button className={styles.btn} onClick={handleNextClick}>
-          Next
-        </button>
-      </div>
+        </ApiContent>
+        <Button onClick={handleNextClick}>Next</Button>
+      </ContentBox>
     )
   }, [articles, articleIndex, handleNextClick])
 
   return (
-    <div>
-      <div className={styles.vectorBox}>
-        <img className={styles.aboutVector} src={aboutVector} alt="vector" />
-        <img className={styles.aboutVector2} src={aboutVector2} alt="vector2" />
-      </div>
+    <Wrapper>
+      <VectorBox>
+        <AboutVectorImg src={aboutVector} alt="vector" />
+        <AboutVector2Img src={aboutVector2} alt="vector2" />
+      </VectorBox>
 
-      <div className={styles.aboutBox1}>
+      <AboutBox>
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
@@ -59,8 +67,8 @@ const About = () => {
         ) : (
           currentArticle
         )}
-      </div>
-    </div>
+      </AboutBox>
+    </Wrapper>
   )
 }
 
