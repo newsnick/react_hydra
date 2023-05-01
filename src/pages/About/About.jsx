@@ -75,14 +75,47 @@ const About = () => {
           <p>Error: {error}</p>
         ) : articles.length > 0 && articleIndex < articles.length ? (
           <div className={styles.contentBox} key={articles[articleIndex].id}>
-            <h2 className={styles.text1}>
+            {articles.length > 0 && articleIndex < articles.length && (
+              <img
+                className={styles.aboutImg}
+                src={articles[articleIndex].image}
+                alt={articles[articleIndex].title
+                  .split(' ')
+                  .slice(0, 3)
+                  .join(' ')}
+              />
+            )}
+            <h2 className={styles.apiHeader1}>
               {articles[articleIndex].title.split(' ').slice(0, 6).join(' ')}
             </h2>
 
-            <p className={styles.text3}>
+            <p className={styles.apiContent}>
               {articles[articleIndex].description
                 .split(' ')
-                .slice(0, 26)
+                .slice(0, 100)
+                .join(' ')}
+            </p>
+            <button className={styles.btn} onClick={handleNextClick}>
+              Next
+            </button>
+          </div>
+        ) : null}{' '}
+        {/* <div className={styles.aboutBox1}>
+        {' '}
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : articles.length > 0 && articleIndex < articles.length ? (
+          <div className={styles.contentBox} key={articles[articleIndex].id}>
+            <h2 className={styles.apiHeader1}>
+              {articles[articleIndex].title.split(' ').slice(0, 6).join(' ')}
+            </h2>
+
+            <p className={styles.apiContent}>
+              {articles[articleIndex].description
+                .split(' ')
+                .slice(0, 100)
                 .join(' ')}
             </p>
             <button className={styles.btn} onClick={handleNextClick}>
@@ -92,12 +125,12 @@ const About = () => {
         ) : null}{' '}
         {articles.length > 0 && articleIndex < articles.length && (
           <img
-            className={styles.homeImage}
+            className={styles.aboutImg}
             src={articles[articleIndex].image}
             alt={articles[articleIndex].title.split(' ').slice(0, 3).join(' ')}
           />
-        )}
-        <div className={styles.aboutImage}>
+        )} */}
+        {/* <div className={styles.aboutImage}>
           <img className={styles.aboutImg} src={aboutimg} alt="about" />
         </div>
         <div>
@@ -115,7 +148,7 @@ const About = () => {
             dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
             bibendum. Leo a diam sollicitudi n tempor.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   )

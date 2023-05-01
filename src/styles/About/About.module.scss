@@ -5,6 +5,7 @@ $imgshadow: rgba(0, 0, 0, 0.25);
 .vectorBox {
   @include vectorBox;
   margin-left: -250px;
+  z-index: -1;
 }
 
 .aboutVector,
@@ -34,11 +35,20 @@ $imgshadow: rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px $imgshadow;
   border-radius: 100px 240px;
   z-index: 3;
-  position: relative;
+  position: absolute;
+  width: 524px;
+  height: 557px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  margin-left: -685px;
+  margin-top: -270px;
 }
 
 .apiHeader1 {
   @include header1;
+  position: absolute;
+  margin-top: -175px;
+  margin-left: -50px;
+  max-width: 630px;
 }
 
 .apiHeader2 {
@@ -49,4 +59,20 @@ $imgshadow: rgba(0, 0, 0, 0.25);
   max-width: 630px;
   margin: 20px 0 20px;
   @include mntext;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+
+.btn {
+  @include btnlarge;
+  margin-left: 300px;
+  margin-top: 60px;
+  margin-top: 160px;
+  position: absolute;
+  margin-left: -50px;
+}
+
+.contentBox {
+  margin-left: 100px;
 }
