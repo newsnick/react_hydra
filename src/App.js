@@ -28,7 +28,6 @@ const App = () => {
           <Home />
           <Introduction />
           <About />
-
           <Presentation />
           <Showcase />
           <Specs />

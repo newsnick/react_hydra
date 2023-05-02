@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
+
 import styles from '../../styles/VRNews/VRNews.module.scss'
 import cardLine from '../../assets/webbrowser/icons/cardline.svg'
 
@@ -15,16 +16,20 @@ function shuffleArray(array) {
 }
 
 function VRNews() {
+  const [loading2, setLoading2] = useState(true)
   const dispatch = useDispatch()
-  // const articles = useSelector((state) => state.vrnews?.articles)
-  // const loading = useSelector((state) => state.vrnews?.loading)
-  // const error = useSelector((state) => state.vrnews?.error)
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     dispatch(fetchVRNews())
   }, [dispatch])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading2(false)
+    }, 5000)
+  }, [])
 
   const shuffledArticles = useMemo(() => {
     if (articles && articles.length > 0) {
@@ -43,11 +48,7 @@ function VRNews() {
 
   if (loading) {
     // return <div>Loading...</div>
-    return (
-      <div>
-        <Skeleton active />
-      </div>
-    )
+    return <div></div>
   }
 
   if (error) {
@@ -55,36 +56,57 @@ function VRNews() {
   }
 
   return (
-    <div className={styles.newsCard} id="vrnews">
-      {shuffledArticles?.length > 0 && (
-        <div className={styles.apiBox} key={shuffledArticles[currentIndex].id}>
-          <img
-            className={styles.thumbnailImage}
-            src={shuffledArticles[currentIndex].image}
-            alt={shuffledArticles[currentIndex].title
-              .split(' ')
-              .slice(0, 3)
-              .join(' ')}
-          />
-          <h2 className={styles.title}>
-            {shuffledArticles[currentIndex].title
-              .split(' ')
-              .slice(0, 3)
-              .join(' ')}
-          </h2>{' '}
-          <img className={styles.line} src={cardLine} alt="line" />
-          <p className={styles.content}>
-            {shuffledArticles[currentIndex].description
-              .split(' ')
-              .slice(0, 15)
-              .join(' ')}
-          </p>
-          <button className={styles.btn} onClick={handleNextPost}>
-            Load Next Post
-          </button>
+    <>
+      {loading2 ? (
+        <Skeleton
+          active
+          title={{ width: 100 }}
+          avatar={true}
+          paragraph={{
+            rows: 1,
+            width: [100],
+          }}
+          style={{
+            marginLeft: '-40px',
+            padding: '100px',
+          }}
+        />
+      ) : (
+        <div className={styles.newsCard} id="vrnews">
+          {shuffledArticles?.length > 0 && (
+            <div
+              className={styles.apiBox}
+              key={shuffledArticles[currentIndex].id}
+            >
+              <img
+                className={styles.thumbnailImage}
+                src={shuffledArticles[currentIndex].image}
+                alt={shuffledArticles[currentIndex].title
+                  .split(' ')
+                  .slice(0, 3)
+                  .join(' ')}
+              />
+              <h2 className={styles.title}>
+                {shuffledArticles[currentIndex].title
+                  .split(' ')
+                  .slice(0, 3)
+                  .join(' ')}
+              </h2>{' '}
+              <img className={styles.line} src={cardLine} alt="line" />
+              <p className={styles.content}>
+                {shuffledArticles[currentIndex].description
+                  .split(' ')
+                  .slice(0, 15)
+                  .join(' ')}
+              </p>
+              <button className={styles.btn} onClick={handleNextPost}>
+                Load Next Post
+              </button>
+            </div>
+          )}
         </div>
       )}
-    </div>
+    </>
   )
 }
 

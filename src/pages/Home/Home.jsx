@@ -5,9 +5,24 @@ import styles from '../../styles/Home/Home.module.scss'
 import homeRectangle from '../../assets/webbrowser/images/homerectangle.svg'
 import { bgVectors, homeImage } from '../../utils'
 import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
+import { Skeleton } from 'antd'
 
 const Home = () => {
   const dispatch = useDispatch()
+  const [loading2, setLoading2] = useState(true)
+  const [loading3, setLoading3] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading2(false)
+    }, 5000)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading3(false)
+    }, 500000)
+  }, [])
 
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [articleIndex, setArticleIndex] = useState(1)
@@ -67,8 +82,21 @@ const Home = () => {
       <NavBar />
 
       <div className={styles.containerMax}>
-        {loading ? (
-          <p>Loading...</p>
+        {loading2 ? (
+          <Skeleton
+            active
+            avatar={true}
+            title={{ width: '250px' }}
+            paragraph={{
+              rows: 1,
+              width: [350],
+              flexWrap: 'nowrap',
+            }}
+            style={{
+              marginLeft: '1440px',
+              padding: '100px',
+            }}
+          />
         ) : error ? (
           <p>Error: {error}</p>
         ) : articles.length > 0 && articleIndex < articles.length ? (
@@ -85,13 +113,28 @@ const Home = () => {
             </button>
           </div>
         ) : null}
-        {articles.length > 0 && articleIndex < articles.length && (
-          <img
-            className={styles.homeImage}
-            src={articles[articleIndex].image}
-            alt={articles[articleIndex].title.split(' ').slice(0, 3).join(' ')}
-          />
-        )}
+        {articles.length > 0 &&
+          articleIndex < articles.length &&
+          (loading3 ? (
+            <Skeleton
+              active
+              title={{ width: '350px' }}
+              paragraph={{ rows: 1, width: '350px' }}
+              style={{
+                marginLeft: '2200px',
+                marginTop: '-300px',
+              }}
+            />
+          ) : (
+            <img
+              className={styles.homeImage}
+              src={articles[articleIndex].image}
+              alt={articles[articleIndex].title
+                .split(' ')
+                .slice(0, 3)
+                .join(' ')}
+            />
+          ))}
       </div>
       <div className={styles.rectangleBox}>
         <img
