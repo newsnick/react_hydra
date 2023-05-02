@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading3(false)
-    }, 500000)
+    }, 5000)
   }, [])
 
   const { articles, loading, error } = useSelector((state) => state.vrnews)
