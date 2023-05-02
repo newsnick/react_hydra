@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
+import { Skeleton } from 'antd'
 import styles from '../../styles/VRNews/VRNews.module.scss'
 import cardLine from '../../assets/webbrowser/icons/cardline.svg'
 
@@ -15,9 +16,10 @@ function shuffleArray(array) {
 
 function VRNews() {
   const dispatch = useDispatch()
-  const articles = useSelector((state) => state.vrnews?.articles)
-  const loading = useSelector((state) => state.vrnews?.loading)
-  const error = useSelector((state) => state.vrnews?.error)
+  // const articles = useSelector((state) => state.vrnews?.articles)
+  // const loading = useSelector((state) => state.vrnews?.loading)
+  // const error = useSelector((state) => state.vrnews?.error)
+  const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -31,12 +33,21 @@ function VRNews() {
     return []
   }, [articles])
 
+  // const shuffledArticles = useMemo(() => {
+  //   shuffleArray(articles)
+  // }, [articles])
+
   const handleNextPost = useCallback(() => {
     setCurrentIndex((currentIndex + 1) % shuffledArticles.length)
   }, [currentIndex, shuffledArticles])
 
   if (loading) {
-    return <div>Loading...</div>
+    // return <div>Loading...</div>
+    return (
+      <div>
+        <Skeleton active />
+      </div>
+    )
   }
 
   if (error) {
@@ -45,7 +56,7 @@ function VRNews() {
 
   return (
     <div className={styles.newsCard} id="vrnews">
-      {shuffledArticles.length > 0 && (
+      {shuffledArticles?.length > 0 && (
         <div className={styles.apiBox} key={shuffledArticles[currentIndex].id}>
           <img
             className={styles.thumbnailImage}

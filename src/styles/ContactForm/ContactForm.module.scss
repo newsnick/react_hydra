@@ -74,7 +74,7 @@
 }
 
 .inputField2 {
-  @include inputfield;
+  @include inputField;
   width: 1058px;
   height: 72px;
   padding-left: 3%;
@@ -82,7 +82,7 @@
 }
 
 .inputTextArea {
-  @include inputfield;
+  @include inputField;
   justify-content: center;
   display: inline;
   width: 1058px;

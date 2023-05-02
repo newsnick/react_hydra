@@ -11,8 +11,8 @@ import {
   Wrapper,
   Button,
   ContentBox,
-} from '../../index.js'
-import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
+} from '../../styled.js'
+import { fetchVRNews2 } from '../../redux/reducer/VRNewsSlice2'
 import aboutimg from '../../assets/webbrowser/images/introimage.svg'
 import aboutVector from '../../assets/webbrowser/icons/aboutvector.svg'
 import aboutVector2 from '../../assets/webbrowser/icons/aboutvector2.svg'
@@ -23,7 +23,7 @@ const About = () => {
   const [articleIndex, setArticleIndex] = useState(1)
 
   useEffect(() => {
-    dispatch(fetchVRNews())
+    dispatch(fetchVRNews2())
   }, [dispatch])
 
   const handleNextClick = useCallback(() => {

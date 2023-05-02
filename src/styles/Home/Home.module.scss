@@ -57,7 +57,7 @@
 }
 
 .btn {
-  @include btnlarge;
+  @include btnLarge;
 }
 
 .text1,
@@ -80,7 +80,7 @@
 }
 
 .text3 {
-  @include mntext;
+  @include mnText;
   max-width: 450px;
   height: 144px;
 }

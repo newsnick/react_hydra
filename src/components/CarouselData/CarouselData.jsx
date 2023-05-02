@@ -1,5 +1,5 @@
 import VRNews from '../VRNews/VRNews'
-import StyledCarousel from '../../index.js'
+import StyledCarousel from '../../styled.js'
 import styles from '../../styles/CarouselData/CarouselData.module.scss'
 import { cardsData } from '../../utils'
 

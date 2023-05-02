@@ -19,14 +19,14 @@
 }
 
 .title {
-  @include fetchedtitle;
+  @include fetchedTitle;
   padding: 3%;
   text-align: left;
   max-width: 281px;
 }
 
 .content {
-  @include fetchedtext;
+  @include fetchedText;
   font-size: 14px;
   line-height: 21px;
   text-align: left;
@@ -44,7 +44,7 @@
 }
 
 .button {
-  @include fetchbtn;
+  @include fetchBtn;
 }
 
 .modalBackdrop {

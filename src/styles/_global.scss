@@ -66,7 +66,7 @@ a {
   cursor: pointer;
 }
 
-@mixin btnlarge {
+@mixin btnLarge {
   width: 214px;
   height: 48px;
   background: linear-gradient(90deg, $btncol1, $btncol2);
@@ -93,14 +93,14 @@ a {
   color: $altheader;
 }
 
-@mixin mntext {
+@mixin mnText {
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
   color: $maintext;
 }
 
-@mixin inputfield {
+@mixin inputField {
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -126,7 +126,7 @@ a {
   padding-left: 400px;
 }
 
-@mixin fetchedtitle {
+@mixin fetchedTitle {
   font-weight: 700;
   font-size: 14.6px;
   line-height: 17px;
@@ -138,14 +138,14 @@ a {
   background: $primarycolor;
 }
 
-@mixin fetchedtext {
+@mixin fetchedText {
   font-size: 18px;
   line-height: 21px;
   color: $whitegeneric;
   background: $primarycolor;
 }
 
-@mixin fetchbtn {
+@mixin fetchBtn {
   display: flex;
   flex-direction: row;
   justify-content: center;
