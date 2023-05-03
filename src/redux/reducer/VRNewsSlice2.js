@@ -49,7 +49,7 @@ export const useFetchVRNews = () => {
   const dispatch = useDispatch()
   const memoizedFetchVRNews = useCallback(() => {
     dispatch(fetchVRNews2())
-  }, [dispatch])
+  }, [])
 
   return memoizedFetchVRNews
 }

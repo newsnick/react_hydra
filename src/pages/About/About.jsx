@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState, useMemo, useCallback } from 'react'
+import { useSelector } from 'react-redux'
 import {
   VectorBox,
   AboutVectorImg,
@@ -12,19 +12,19 @@ import {
   Button,
   ContentBox,
 } from '../../styled.js'
-import { fetchVRNews2 } from '../../redux/reducer/VRNewsSlice2'
+//import { fetchVRNews2 } from '../../redux/reducer/VRNewsSlice2'
 import aboutimg from '../../assets/webbrowser/images/introimage.svg'
 import aboutVector from '../../assets/webbrowser/icons/aboutvector.svg'
 import aboutVector2 from '../../assets/webbrowser/icons/aboutvector2.svg'
 
 const About = () => {
-  const dispatch = useDispatch()
+  //const dispatch = useDispatch()
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [articleIndex, setArticleIndex] = useState(1)
 
-  useEffect(() => {
-    dispatch(fetchVRNews2())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(fetchVRNews2())
+  // }, [])
 
   const handleNextClick = useCallback(() => {
     setArticleIndex(Math.floor(Math.random() * articles.length))

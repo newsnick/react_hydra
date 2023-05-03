@@ -7,6 +7,29 @@ import { bgVectors, homeImage } from '../../utils'
 import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
 
+const getStyledTitle = (title) => {
+  const words = title.split(' ')
+  const firstWord = words[0]
+  const lastTwoWords = words.slice(-2).join(' ')
+  const remainingWords = words.slice(1, -2).join(' ')
+  const titleStyle = {
+    background: 'linear-gradient(91.57deg, #C0B7E8 -1.02%, #8176AF 36.25%)',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent',
+    '-moz-background-clip': 'text',
+    '-moz-text-fill-color': 'transparent',
+    'background-clip': 'text',
+    'text-fill-color': 'transparent',
+  }
+  return (
+    <>
+      <span style={titleStyle}>{firstWord}</span>{' '}
+      <span style={{ color: 'white' }}>{remainingWords}</span>{' '}
+      <span style={titleStyle}>{lastTwoWords}</span>
+    </>
+  )
+}
+
 const Home = () => {
   const dispatch = useDispatch()
   const [loading2, setLoading2] = useState(true)
@@ -34,32 +57,6 @@ const Home = () => {
   const handleNextClick = useCallback(() => {
     setArticleIndex(Math.floor(Math.random() * articles.length))
   }, [articles])
-
-  const getStyledTitle = useMemo(
-    () => (title) => {
-      const words = title.split(' ')
-      const firstWord = words[0]
-      const lastTwoWords = words.slice(-2).join(' ')
-      const remainingWords = words.slice(1, -2).join(' ')
-      const titleStyle = {
-        background: 'linear-gradient(91.57deg, #C0B7E8 -1.02%, #8176AF 36.25%)',
-        '-webkit-background-clip': 'text',
-        '-webkit-text-fill-color': 'transparent',
-        '-moz-background-clip': 'text',
-        '-moz-text-fill-color': 'transparent',
-        'background-clip': 'text',
-        'text-fill-color': 'transparent',
-      }
-      return (
-        <>
-          <span style={titleStyle}>{firstWord}</span>{' '}
-          <span style={{ color: 'white' }}>{remainingWords}</span>{' '}
-          <span style={titleStyle}>{lastTwoWords}</span>
-        </>
-      )
-    },
-    []
-  )
 
   const article = useMemo(
     () => articles[articleIndex],

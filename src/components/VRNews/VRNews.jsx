@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
+import { useSelector } from 'react-redux'
+//import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
 
 import styles from '../../styles/VRNews/VRNews.module.scss'
@@ -17,13 +17,13 @@ function shuffleArray(array) {
 
 function VRNews() {
   const [loading2, setLoading2] = useState(true)
-  const dispatch = useDispatch()
+  //const dispatch = useDispatch()
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  useEffect(() => {
-    dispatch(fetchVRNews())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(fetchVRNews())
+  // }, [])
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,12 +43,12 @@ function VRNews() {
   // }, [articles])
 
   const handleNextPost = useCallback(() => {
-    setCurrentIndex((currentIndex + 1) % shuffledArticles.length)
+    setCurrentIndex((currentIndex + 1) % shuffledArticles?.length)
   }, [currentIndex, shuffledArticles])
 
   if (loading) {
     // return <div>Loading...</div>
-    return <div></div>
+    return null
   }
 
   if (error) {
