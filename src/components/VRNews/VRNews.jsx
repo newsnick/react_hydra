@@ -54,7 +54,18 @@ function VRNews() {
   if (error) {
     return <div>Error: {error}</div>
   }
-
+  const title = shuffledArticles[currentIndex]?.title
+    .split(' ')
+    .slice(0, 3)
+    .join(' ')
+  const description = shuffledArticles[currentIndex]?.description
+    .split(' ')
+    .slice(0, 15)
+    .join(' ')
+  let altText = shuffledArticles[currentIndex]?.title
+    .split(' ')
+    .slice(0, 3)
+    .join(' ')
   return (
     <>
       {loading2 ? (
@@ -81,24 +92,11 @@ function VRNews() {
               <img
                 className={styles.thumbnailImage}
                 src={shuffledArticles[currentIndex].image}
-                alt={shuffledArticles[currentIndex].title
-                  .split(' ')
-                  .slice(0, 3)
-                  .join(' ')}
+                alt={altText}
               />
-              <h2 className={styles.title}>
-                {shuffledArticles[currentIndex].title
-                  .split(' ')
-                  .slice(0, 3)
-                  .join(' ')}
-              </h2>{' '}
+              <h2 className={styles.title}>{title}</h2>{' '}
               <img className={styles.line} src={cardLine} alt="line" />
-              <p className={styles.content}>
-                {shuffledArticles[currentIndex].description
-                  .split(' ')
-                  .slice(0, 15)
-                  .join(' ')}
-              </p>
+              <p className={styles.content}>{description}</p>
               <button className={styles.btn} onClick={handleNextPost}>
                 Load Next Post
               </button>
