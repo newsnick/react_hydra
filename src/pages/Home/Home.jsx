@@ -113,7 +113,6 @@ const Home = () => {
 
       <div className={styles.rectangleBox}>
         {' '}
-        {/* <img className={styles.rectangle} src={homeRectangle} alt="rectangle" /> */}
         <LinkDirect />
       </div>
     </div>
