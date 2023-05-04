@@ -33,7 +33,10 @@ const getStyledTitle = (title) => {
 const Home = () => {
   const dispatch = useDispatch()
 
-  const { articles, loading, error } = useSelector((state) => state.vrnews)
+  // const { articles, loading, error } = useSelector((state) => state.vrnews)
+  const articles = useSelector((state) => state.vrnews.article)
+  const error = useSelector((state) => state.vrnews.article)
+  const loading = useSelector((state) => state.vrnews.article)
   const [articleIndex, setArticleIndex] = useState(1)
 
   useEffect(() => {

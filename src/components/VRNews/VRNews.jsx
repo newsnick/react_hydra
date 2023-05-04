@@ -17,13 +17,8 @@ function shuffleArray(array) {
 
 function VRNews() {
   const [loading2, setLoading2] = useState(true)
-  //const dispatch = useDispatch()
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [currentIndex, setCurrentIndex] = useState(0)
-
-  // useEffect(() => {
-  //   dispatch(fetchVRNews())
-  // }, [])
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,23 +26,22 @@ function VRNews() {
     }, 5000)
   }, [])
 
-  const shuffledArticles = useMemo(() => {
-    if (articles && articles.length > 0) {
-      return shuffleArray(articles)
-    }
-    return []
-  }, [articles])
-
   // const shuffledArticles = useMemo(() => {
-  //   shuffleArray(articles)
+  //   if (articles && articles.length > 0) {
+  //     return shuffleArray(articles)
+  //   }
+  //   return []
   // }, [articles])
+
+  const shuffledArticles = useMemo(() => {
+    shuffleArray(articles)
+  }, [articles])
 
   const handleNextPost = useCallback(() => {
     setCurrentIndex((currentIndex + 1) % shuffledArticles?.length)
   }, [currentIndex, shuffledArticles])
 
   if (loading) {
-    // return <div>Loading...</div>
     return null
   }
 

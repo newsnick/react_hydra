@@ -8,10 +8,6 @@ function VRNews() {
   const loading = useAppSelector((state) => state.vrnews.loading)
   const error = useAppSelector((state) => state.vrnews.error)
 
-  // useEffect(() => {
-  //   dispatch(fetchVRNews())
-  // }, [])
-
   if (loading) {
     return <div>Loading...</div>
   }

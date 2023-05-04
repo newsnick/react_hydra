@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { useDispatch } from 'react-redux'
 import axios from 'axios'
-import { useCallback } from 'react'
 
 const initialState = {
   articles: [],
@@ -13,7 +11,7 @@ export const fetchVRNews = createAsyncThunk('vrnews/fetchVRNews', async () => {
   const { data } = await axios.get(
     'https://api.currentsapi.services/v1/search?' +
       'keywords=vr+headset&language=en&' +
-      'apiKey=mdrmBuQM4H-fRXECBsKVPrzBmBaCXdDsuA-3E1-rDQufeTNf'
+      'apiKey=ALgzf8tTD9AHJT7pHdWAfo1-IkUNDvdEQszGCG2a3f5gQFM7'
   )
   console.log(data)
 
@@ -41,14 +39,5 @@ export const VRNewsSlice = createSlice({
       })
   },
 })
-
-export const useFetchVRNews = () => {
-  const dispatch = useDispatch()
-  const memoizedFetchVRNews = useCallback(() => {
-    dispatch(fetchVRNews())
-  }, [dispatch])
-
-  return memoizedFetchVRNews
-}
 
 export default VRNewsSlice.reducer
