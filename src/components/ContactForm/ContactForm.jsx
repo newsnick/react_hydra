@@ -134,7 +134,7 @@ function ContactForm() {
   )
 
   return (
-    <div className={styles.formContainer}>
+    <div className={styles.formContainer} id="contact">
       <div className={styles.formBackGround}>
         <p className={styles.header}>JOIN HYDRA</p>
         <img id={styles.line} src={lineGradient} alt="line" />

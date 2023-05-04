@@ -6,6 +6,7 @@ import homeRectangle from '../../assets/webbrowser/images/homerectangle.svg'
 import { bgVectors, homeImage } from '../../utils'
 import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
+import LinkDirect from '../../components/LinkDirect/LinkDirect'
 
 const getStyledTitle = (title) => {
   const words = title.split(' ')
@@ -34,9 +35,9 @@ const Home = () => {
   const dispatch = useDispatch()
 
   // const { articles, loading, error } = useSelector((state) => state.vrnews)
-  const articles = useSelector((state) => state.vrnews.article)
-  const error = useSelector((state) => state.vrnews.article)
-  const loading = useSelector((state) => state.vrnews.article)
+  const articles = useSelector((state) => state.vrnews.articles)
+  const error = useSelector((state) => state.vrnews.error)
+  const loading = useSelector((state) => state.vrnews.loading)
   const [articleIndex, setArticleIndex] = useState(1)
 
   useEffect(() => {
@@ -108,6 +109,12 @@ const Home = () => {
             />
           )
         )}
+      </div>
+
+      <div className={styles.rectangleBox}>
+        {' '}
+        {/* <img className={styles.rectangle} src={homeRectangle} alt="rectangle" /> */}
+        <LinkDirect />
       </div>
     </div>
   )

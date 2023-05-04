@@ -46,7 +46,11 @@ const NavBar = () => {
         </div>
 
         <div className={styles.btns}>
-          <button className={styles.btn}>CONTACT US</button>
+          <button className={styles.btn}>
+            <Link to="#contact" smooth>
+              CONTACT US
+            </Link>
+          </button>
           <button className={styles.btn2}>JOIN HYDRA</button>
         </div>
       </nav>

@@ -31,6 +31,9 @@ $asteriskcolor: #ed6565;
 $neutralfield: #667299;
 $neutralasterisk: #c40303;
 $bgartwork: #3559c7;
+$boxGradient: rgba(58, 52, 86, 0.95) 0%;
+$boxGradient2: #211e2e 100%;
+$boxGradient3: rgba(192, 183, 232, 0.01);
 
 *,
 ::after,
@@ -51,6 +54,7 @@ html {
 
 a {
   text-decoration: none;
+  background-color: transparent;
 }
 
 @mixin btn {
@@ -93,10 +97,24 @@ a {
   color: $altheader;
 }
 
+@mixin header3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: $maintext;
+}
+
 @mixin mnText {
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
+  color: $maintext;
+}
+
+@mixin inputTextFont {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
   color: $maintext;
 }
 

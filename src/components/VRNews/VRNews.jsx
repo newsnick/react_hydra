@@ -26,15 +26,8 @@ function VRNews() {
     }, 5000)
   }, [])
 
-  // const shuffledArticles = useMemo(() => {
-  //   if (articles && articles.length > 0) {
-  //     return shuffleArray(articles)
-  //   }
-  //   return []
-  // }, [articles])
-
   const shuffledArticles = useMemo(() => {
-    shuffleArray(articles)
+    return shuffleArray(articles)
   }, [articles])
 
   const handleNextPost = useCallback(() => {
