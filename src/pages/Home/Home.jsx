@@ -1,10 +1,8 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import NavBar from '../../components/NavBar/NavBar'
 import styles from '../../styles/Home/Home.module.scss'
-import homeRectangle from '../../assets/webbrowser/images/homerectangle.svg'
 import { bgVectors, homeImage } from '../../utils'
-import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
 import LinkDirect from '../../components/LinkDirect/LinkDirect'
 
@@ -34,15 +32,10 @@ const getStyledTitle = (title) => {
 const Home = () => {
   const dispatch = useDispatch()
 
-  // const { articles, loading, error } = useSelector((state) => state.vrnews)
   const articles = useSelector((state) => state.vrnews.articles)
   const error = useSelector((state) => state.vrnews.error)
   const loading = useSelector((state) => state.vrnews.loading)
   const [articleIndex, setArticleIndex] = useState(1)
-
-  useEffect(() => {
-    dispatch(fetchVRNews())
-  }, [dispatch])
 
   const handleNextClick = useCallback(() => {
     setArticleIndex(Math.floor(Math.random() * articles.length))
