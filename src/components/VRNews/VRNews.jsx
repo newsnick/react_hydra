@@ -1,6 +1,5 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
-//import { fetchVRNews } from '../../redux/reducer/VRNewsSlice'
 import { Skeleton } from 'antd'
 
 import styles from '../../styles/VRNews/VRNews.module.scss'
@@ -16,15 +15,8 @@ function shuffleArray(array) {
 }
 
 function VRNews() {
-  const [loading2, setLoading2] = useState(true)
   const { articles, loading, error } = useSelector((state) => state.vrnews)
   const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading2(false)
-    }, 5000)
-  }, [])
 
   const shuffledArticles = useMemo(() => {
     return shuffleArray(articles)
@@ -55,7 +47,7 @@ function VRNews() {
     .join(' ')
   return (
     <>
-      {loading2 ? (
+      {loading ? (
         <Skeleton
           active
           title={{ width: 100 }}
