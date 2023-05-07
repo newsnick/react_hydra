@@ -3,6 +3,7 @@
 .buttonBox {
   position: relative;
   z-index: 3;
+  margin: -50px;
 }
 .roundBtn {
   width: 159px;
@@ -10,10 +11,12 @@
   border-radius: 50%;
   background: linear-gradient(251.27deg, $btncolor, $btncolor2);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .roundBtn:after {
-  background: blue;
+  background: transparent;
 }
 
 .outerShadow {
@@ -25,10 +28,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .apiDescription {
   display: flex;
   padding: 15%;
   gap: 15px;
+  margin-left: -10%;
+}
+
+.apiHeader {
+  width: 280px;
+  height: 40px;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  color: $numberColor;
+  background: transparent;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+
+.btn {
+  background: transparent;
+  border-style: none;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: $btnBeforeColor;
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.btn:active::before {
+  opacity: 0;
 }

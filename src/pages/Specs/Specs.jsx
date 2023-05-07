@@ -8,7 +8,7 @@ import ApiFetchBox from '../../components/ApiFetchBox/ApiFetchBox'
 import RoundButton from '../../components/RoundButton/RoundButton'
 import specsVector from '../../assets/webbrowser/icons/specsvector.svg'
 
-const Specs = () => {
+const Specs = (props) => {
   return (
     <>
       <div className={styles.companies}>
@@ -30,10 +30,10 @@ const Specs = () => {
         <div className={styles.vectorBox}>
           <img className={styles.specsVector} src={specsVector} alt="vector" />
         </div>
-        <RoundButton />
-        <RoundButton />
-        <RoundButton />
-        <RoundButton />
+        <RoundButton number={1} />
+        <RoundButton number={2} />
+        <RoundButton number={3} />
+        <RoundButton number={4} />
       </div>
     </>
   )

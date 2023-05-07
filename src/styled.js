@@ -105,6 +105,8 @@ export const AboutImg = styled.img`
   transform: matrix(-1, 0, 0, 1, 0, 0);
   margin-left: -685px;
   margin-top: -270px;
+    padding: 2%;
+}
 `
 
 export const ApiHeader1 = styled.h2`
