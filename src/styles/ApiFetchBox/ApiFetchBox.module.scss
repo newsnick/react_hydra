@@ -1,20 +1,29 @@
 @import '../_global.scss';
 
+.apiBox {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .fetchBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 300px;
+  gap: 240px;
   padding: 250px;
   flex-wrap: nowrap;
-  padding-top: 16%;
+  padding-top: 15%;
   padding-bottom: 32%;
   margin: -16%;
-  padding-left: 275px;
+  position: absolute;
+  z-index: 1;
+
+  background: transparent;
 }
 
 .apiIntro {
-  width: 350px;
+  width: 300px;
   height: 100px;
   display: flex;
 }
@@ -30,7 +39,7 @@
 .apiContent {
   width: 630px;
   height: 100px;
-  margin: 20px 20px 20px;
+  margin: 20px 20px 20px 50px;
   @include mnText;
 }
 
@@ -47,6 +56,7 @@
   font-weight: 500;
   padding: 10px 20px;
   transition: all 0.3s ease-in-out;
+  margin-left: -100px;
 }
 
 .btn:hover {

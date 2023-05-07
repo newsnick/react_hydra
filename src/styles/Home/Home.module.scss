@@ -42,7 +42,7 @@
   height: 455px;
   background: rgba(0, 0, 0, 0.13);
   border-radius: 100px 100px 100px 240px;
-  margin-left: 1150px;
+  margin-left: 700px;
   box-shadow: 0px 1px 1px 18px rgba(0, 0, 0, 0.3);
 }
 
@@ -54,7 +54,9 @@
 }
 
 .contentBox {
-  margin-left: -150px;
+  margin-left: -750px;
+  height: 500px;
+  margin-top: 40px;
   height: 500px;
 }
 
@@ -102,10 +104,8 @@
 
 .containerMax {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 150px;
-  padding-right: 520px;
-  flex-wrap: wrap;
 }
 
 .rectangleBox {

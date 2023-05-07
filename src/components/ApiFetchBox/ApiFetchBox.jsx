@@ -100,7 +100,7 @@ const ApiFetchBox = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.apiBox}>
         <div className={styles.fetchBox}>
           {loading ? (
             <Skeleton

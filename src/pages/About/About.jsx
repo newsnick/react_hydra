@@ -45,7 +45,7 @@ const About = () => {
   }, [articles, articleIndex, handleNextClick])
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div className={styles.about}>
       <div
         style={{
           position: 'absolute',
