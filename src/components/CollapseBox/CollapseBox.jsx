@@ -1,13 +1,91 @@
 import { Collapse, Divider } from 'antd'
 import styles from '../../styles/CollapseBox/CollapseBox.module.scss'
 import image from '../../assets/webbrowser/images/showcaseimage.svg'
+import downArrow from '../../assets/webbrowser/icons/downarrow.svg'
 
 const { Panel } = Collapse
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`
+const text = (
+  <div className={styles.textContainer}>
+    ` Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br /> quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet
+    tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <hr />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br /> quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet
+    tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae.
+    <hr />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br /> quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet
+    tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae.
+    <hr />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo
+    <br /> quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet
+    tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae. <br />
+    Vitae sapien pellentesque habitant morbi tristique senectus et netus et.
+    Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris
+    commodo <br />
+    quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+    Ornare lectus sit amet est placerat in. Lectus magna fringilla urna
+    porttitor rhoncus vitae.`
+  </div>
+)
 const CollapseBox = () => (
   <div className={styles.centeredBox}>
     <div className={styles.box}>
@@ -23,14 +101,47 @@ const CollapseBox = () => (
         <p>{text}</p>
       </Panel>
     </Collapse> */}
+      {/* <Divider className={styles.divider} orientation="center">
+        <Collapse bordered={false} size="large">
+          <img className={styles.bgimage} src={image} alt="showcase" />
+          <Panel
+            className={styles.content}
+            showArrow={false}
+            header={
+              <img
+                className={styles.downArrow}
+                src={downArrow}
+                alt="downarrow"
+              />
+            }
+            key="1"
+          >
+            <p>{text}</p>
+          </Panel>
+        </Collapse>
+      </Divider> */}
       <Divider className={styles.divider} orientation="center">
-        <img className={styles.bgimage} src={image} alt="showcase" />
+        <Collapse className={styles.collapse} bordered={false} size="large">
+          <img className={styles.bgimage} src={image} alt="showcase" />
+          <Panel
+            className={styles.content}
+            showArrow={false}
+            header={
+              <div style={{ color: 'inherit' }}>
+                <img
+                  className={styles.downArrow}
+                  src={downArrow}
+                  alt="downarrow"
+                />
+              </div>
+            }
+            key="1"
+          >
+            {/* <p className={styles.text}>{text}</p> */}
+            <p className={`${styles.text} text`}>{text}</p>
+          </Panel>
+        </Collapse>
       </Divider>
-      <Collapse size="large">
-        <Panel className={styles.content} header="" key="1">
-          <p>{text}</p>
-        </Panel>
-      </Collapse>
     </div>
   </div>
 )
