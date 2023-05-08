@@ -7,6 +7,26 @@
 .vector1,
 .vector2 {
   position: absolute;
-  z-index: 3;
+  z-index: -1;
   background-color: transparent;
+}
+
+.footermain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5%;
+  position: relative;
+  background: transparent;
+  align-items: start;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  padding: 15% 0 15% 0;
+}
+
+.button {
+  @include btnLarge;
 }
