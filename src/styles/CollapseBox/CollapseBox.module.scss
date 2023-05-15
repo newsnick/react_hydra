@@ -1,4 +1,4 @@
-@import '../_global.scss';
+/* @import '../_global.scss';
 
 .centeredBox {
   display: flex;
@@ -18,7 +18,6 @@
   position: relative;
 
   z-index: 4;
-  //background: #211e2e;
   background: inherit;
   box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
   border-radius: 160px;
@@ -27,7 +26,6 @@
 .divider {
   width: 1278px;
   height: 303px;
-  //  background: #211e2e;
   background: inherit;
   box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
   border-radius: 160px;
@@ -43,6 +41,15 @@
   margin-top: 100px;
   background: inherit;
   color: inherit;
+  overflow: visible;
+}
+
+.collapsedText {
+  max-height: 250px;
+  overflow-y: scroll;
+  margin-top: -75px;
+  position: relative;
+  z-index: 2;
 }
 
 .downArrow {
@@ -67,6 +74,10 @@
   margin: auto;
 }
 
+.ant-collapse-header {
+  margin-top: -50px;
+}
+
 .textContainer {
   @include mnText;
   text-align: center;
@@ -76,4 +87,110 @@
 .text {
   text-align: center;
   @include mnText;
+}
+*/
+
+@import '../_global.scss';
+
+.centeredBox {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  margin-top: 400px;
+  margin-bottom: auto;
+}
+
+.box {
+  width: 1278px;
+  height: 303px;
+  text-align: center;
+}
+
+.bgimage {
+  position: relative;
+
+  z-index: 4;
+  background: inherit;
+  box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
+  border-radius: 160px;
+}
+
+.divider {
+  width: 1278px;
+  height: 303px;
+  background: inherit;
+  box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
+  border-radius: 160px;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 4;
+  max-width: 1265px;
+  height: 500px;
+  margin-top: 100px;
+  background: inherit;
+  color: inherit;
+  transition: opacity 0.3s ease, padding 0.3s ease;
+}
+
+.collapsedText {
+  max-height: 250px;
+  overflow-y: scroll;
+  margin-top: -75px;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  padding: 20px;
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.downArrow {
+  border-radius: 50%;
+  background: inherit;
+  position: absolute;
+  top: -150px;
+  box-shadow: 0px 1px 1px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.downArrow:hover {
+  transform: translateY(2px);
+}
+
+.downArrow:active {
+  transform: translateY(4px);
+}
+
+.collapse {
+  background: transparent;
+  margin: auto;
+}
+
+.ant-collapse-header {
+  margin-top: -50px;
+}
+
+.textContainer {
+  @include mnText;
+  text-align: center;
+  max-width: 800px;
+}
+
+.text {
+  text-align: center;
+  @include mnText;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }

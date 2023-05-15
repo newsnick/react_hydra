@@ -2,6 +2,7 @@
 
 .vectorBox {
   @include vectorBox;
+  z-index: -1;
 }
 
 .vector1,
@@ -14,7 +15,7 @@
 .footermain {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 5%;
   position: relative;
   background: transparent;
@@ -29,4 +30,17 @@
 
 .button {
   @include btnLarge;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 75px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* identical to box height */
+  letter-spacing: 0.13em;
 }

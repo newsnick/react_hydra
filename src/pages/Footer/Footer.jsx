@@ -10,6 +10,7 @@ import instagram from '../../assets/webbrowser/icons/iconinstagram.svg'
 import youtube from '../../assets/webbrowser/icons/iconyoutube.svg'
 import linkedin from '../../assets/webbrowser/icons/iconlinkedin.svg'
 import pinterest from '../../assets/webbrowser/icons/iconpinterest.svg'
+import horizontalLine from '../../assets/webbrowser/icons/horizontalline.svg'
 import { BrowserRouter } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 
@@ -81,6 +82,13 @@ const Footer = () => {
             </div>
             <button className={styles.button}>BUILD YOUR WORLD</button>
           </div>
+        </div>{' '}
+        <div className={styles.copyright}>
+          <img src={horizontalLine} alt="line" />
+          <p>
+            2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS
+            RESERVED{' '}
+          </p>
         </div>
       </footer>
     </BrowserRouter>
