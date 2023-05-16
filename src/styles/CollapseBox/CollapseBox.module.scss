@@ -186,11 +186,83 @@
 .textContainer {
   @include mnText;
   text-align: center;
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .text {
   text-align: center;
   @include mnText;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.apiHeader1 {
+  @include header1;
+}
+
+.apiHeader2 {
+  @include header2;
+}
+
+.apiContent {
+  height: 100px;
+  margin: 20px 20px 20px 50px;
+  @include mnText;
+}
+
+.btn {
+  border-style: none;
+  cursor: pointer;
+  background-color: transparent !important;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px $apiBoxColor2;
+  color: $apiBoxColor;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  margin-left: -100px;
+}
+
+.btn:hover {
+  background-color: transparent !important;
+  box-shadow: 0px 4px 8px $apiBoxColor3;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: transparent !important;
+  box-shadow: 0px 2px 4px $apiBoxColor2;
+  transform: translateY(0px);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.arrow {
+  height: 90px;
+  width: 272px;
+  margin-right: -21px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btn:active .arrow {
+  transform: translateX(2px) translateY(1px);
+}
+
+.titleBox {
+  min-width: 350px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headers {
+  max-width: 350px;
+  margin-right: 250px;
 }
