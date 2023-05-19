@@ -103,7 +103,7 @@ function ContactForm() {
           name="subject"
           value={selectedSubject}
           onChange={(e) => setSelectedSubject(e.target.value)}
-          {...register('subject', { required: 'This field is required' })}
+          {...register('subject')}
         >
           <option value="" disabled>
             Subject

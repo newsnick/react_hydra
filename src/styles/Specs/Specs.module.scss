@@ -4,6 +4,7 @@
   @include vectorBox;
   padding-left: 0px;
   top: 4065px;
+  z-index: -1;
 }
 
 .specsVector {
@@ -30,7 +31,6 @@
   display: flex;
   justify-content: center;
   gap: 115px;
-  padding: 3%;
   margin-left: 2%;
   margin-top: 150px;
   margin: 200px;
